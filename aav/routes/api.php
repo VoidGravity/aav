@@ -18,12 +18,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 // Seeder
-Route::post('/admin', 'App\Http\Controllers\UserController@Seeder');
+Route::post('/admin', 'App\Http\Controllers\UserController@Seeder');// done
 //login
-Route::post('/login', 'App\Http\Controllers\AuthController@login');
+Route::post('/login', 'App\Http\Controllers\AuthController@login');// done
 // crud user 
 Route::get('/users', 'App\Http\Controllers\UserController@index'); // done
 Route::post('/users', 'App\Http\Controllers\UserController@store'); //done 
 Route::put('/users/{id}', 'App\Http\Controllers\UserController@update'); // done
 Route::delete('/users/{id}', 'App\Http\Controllers\UserController@destroy'); // done
+
+// car 
+Route::get('/cars', 'App\Http\Controllers\CarController@index'); // done
+Route::get('/carPrice/{id}', 'App\Http\Controllers\CarController@price'); // done
 
