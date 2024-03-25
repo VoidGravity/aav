@@ -18,7 +18,7 @@ jobs:
 
       # Change directory to Laravel project directory
       - name: Change directory to Laravel project
-        run: cd aav
+        run: cd ../../aav
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
