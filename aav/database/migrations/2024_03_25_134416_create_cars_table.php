@@ -23,7 +23,9 @@ class CreateCarsTable extends Migration
             $table->integer('puissance')->nullable();
             $table->string('motorisation', 255)->nullable();
             $table->string('carburant', 255)->nullable();
-            $table->text('options')->nullable();
+            $table->text('options')->nullable();    
+            $table->timestamps();
+            
         });
     }
 

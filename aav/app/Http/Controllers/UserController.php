@@ -52,7 +52,7 @@ class UserController extends Controller
             $user->password = Hash::make($request->password);
             $user->role = $request->role;
             $user->save();
-            return response()->json(['message' => 'User updated successfully!']);
+            return response()->json(['message' => 'User updated successfully!'], 200);
         } catch (\Exception $e) {
             return response()->json(['message' => 'Somthig went wrong!']);
         }

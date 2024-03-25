@@ -29,5 +29,5 @@ Route::delete('/users/{id}', 'App\Http\Controllers\UserController@destroy'); // 
 
 // car 
 Route::get('/cars', 'App\Http\Controllers\CarController@index'); // done
-Route::get('/carPrice/{id}', 'App\Http\Controllers\CarController@price'); // done
+Route::get('/price', 'App\Http\Controllers\CarController@estimatePrice'); // done
 
