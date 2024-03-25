@@ -16,6 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Change directory to Laravel project directory
+      - name: Change directory to Laravel project
+        run: cd aav
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
