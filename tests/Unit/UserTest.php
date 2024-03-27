@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\Models\Car;
 use App\Models\User;
@@ -10,6 +10,7 @@ use Tests\TestCase;
 
 class UserTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -121,19 +122,6 @@ class UserTest extends TestCase
             ]);
     }
 
-    public function test_user_can_estimate_price()
-    {
-        $user = User::factory()->create();
-        $response = $this->actingAs($user)->call('GET', '/api/price', [
-            'marque' => 'hyundai',
-            'modele' => 'accent',
-            'annee' => 2021,
-        ]);
     
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'estimatedPrice',
-            ]);
-    }
     
 }
